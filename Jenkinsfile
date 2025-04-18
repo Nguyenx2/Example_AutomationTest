@@ -3,10 +3,6 @@ pipeline {
         label 'agent1'
     }
 
-    environment {
-
-    }
-
     stages {
         stage('Checkout') {
             steps {
@@ -23,9 +19,7 @@ pipeline {
 
         stage('Run tests') {
             steps {
-                sh {
-                    sh 'npx playwright test'
-                }
+                sh 'npx playwright test'
             }
         }
 
@@ -35,7 +29,8 @@ pipeline {
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
-                    reportDir: 'plawyright-report',
+                    reportDir: 'playwright-report',
+                    reportFiles: 'index.html',
                     reportName: 'Playwright Test Report',
                     reportTitles: ''
                 ])
