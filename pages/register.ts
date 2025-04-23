@@ -21,7 +21,7 @@ export class RegisterPage {
   }
 
   async navigate(): Promise<void> {
-    await this.page.goto("http://localhost:5173/");
+    await this.page.goto("/");
   }
 
   async pause(): Promise<void> {
