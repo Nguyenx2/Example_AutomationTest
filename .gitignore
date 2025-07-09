@@ -1,4 +1,4 @@
-
+.env
 # Playwright
 node_modules/
 /test-results/
@@ -6,3 +6,5 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /node_modules/
+package-lock.json
+test-data/auth/storageState.json
